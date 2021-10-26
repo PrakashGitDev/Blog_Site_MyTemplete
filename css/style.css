@@ -261,15 +261,16 @@ section {
 }
 
 .container .posts-container {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.9em;
 }
 
 .container .posts-container .nested {
     display: grid;
     grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    grid-gap: 1em;
+    grid-row-gap: 1em;
+    height: 50vh;
 }
 
 .container .posts-container .post {
