@@ -1,4 +1,6 @@
-
+<?php
+require('includes/functions.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,8 +19,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
         integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 
 </head>
 
@@ -43,8 +47,8 @@
         </div>
 
         <form action="" class="search-form">
-            <input type="search" name="" placeholder="search here..." id="search-box">
-            <label for="search-box" class="fas fa-search"></label>
+            <input type="search" name="search" placeholder="search here..." id="search-box">
+            <button style="background: transparent;" type="submit" ><label for="search-box" class="fas fa-search" type="submit"></label></button>
         </form>
 
     </header>

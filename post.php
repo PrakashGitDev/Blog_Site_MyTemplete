@@ -1,3 +1,11 @@
+<?php
+require('includes/database.php');
+$post=new query();
+$id=$_GET['id'];
+$condition_arr=array('id'=>$id);
+$result=$post->getData('posts','*',$condition_arr,'','',1);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,29 +55,13 @@
 
         <div class="posts-container">
                 <div class="post">
-                    <img src="images/blog-1.jpg" alt="" class="postimage">
+                    <img src="assets/images/blog-1.jpg" alt="" class="postimage">
                     <div class="date">
                         <i class="far fa-clock"></i>
-                        <span>1st may, 2021</span>
+                        <span>Posted on <?=date('F jS,Y',strtotime($result['0']['date']))?></span>
                     </div>
-                    <h3 class="title">blog title goes here</h3>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum molestias rerum
-                        numquam,
-                        quos aut est culpa quisquam excepturi sed a inventore dicta tempore consequuntur possimus magnam
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum molestias rerum
-                        numquam,
-                        quos aut est culpa quisquam excepturi sed a inventore dicta tempore consequuntur possimus magnam
-                        numquam,
-                        quos aut est culpa quisquam excepturi sed a inventore dicta tempore consequuntur possimus magnam
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum molestias rerum
-                        numquam,
-                        quos aut est culpa quisquam excepturi sed a inventore dicta tempore consequuntur possimus magnam
-                        numquam,
-                        quos aut est culpa quisquam excepturi sed a inventore dicta tempore consequuntur possimus magnam
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum molestias rerum
-                        numquam,
-                        quos aut est culpa quisquam excepturi sed a inventore dicta tempore consequuntur possimus magnam
-                    
+                    <h3 class="title"><?=$result['0']['title']?></h3>
+                    <p class="text"><?=$result['0']['content']?>
                     </p>
 
             <div class="links">
@@ -91,7 +83,7 @@
             <div class="posts-container">
             <a href="post.php">
                 <div class="post">
-                    <img src="images/blog-1.jpg" alt="" class="image">
+                    <img src="assets/images/blog-1.jpg" alt="" class="image">
                     <div class="date">
                         <i class="far fa-clock"></i>
                         <span>1st may, 2021</span>
@@ -121,35 +113,7 @@
             </div>
         </div>
 
-            <a href="#">
-                <div class="post">
-                    <img src="images/blog-2.jpg" alt="" class="image">
-                    <div class="date">
-                        <i class="far fa-clock"></i>
-                        <span>1st may, 2021</span>
-                    </div>
-                    <h3 class="title">blog title goes here</h3>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum molestias rerum
-                        numquam,
-                        quos aut est culpa quisquam excepturi sed a inventore dicta tempore consequuntur possimus magnam
-                    </p>
-                
-            </a>
-            <div class="links">
-                <a href="#" class="user">
-                    <i class="far fa-user"></i>
-                    <span>Admin</span>
-                </a>
-                <a href="#" class="icon">
-                    <i class="far fa-comment"></i>
-                    <span>(45)</span>
-                </a>
-                <a href="#" class="icon">
-                    <i class="far fa-share-square"></i>
-                    <span>(29)</span>
-                </a>
-            </div>
-        </div>
+            
 
         </div>
         </div>
@@ -248,29 +212,6 @@
     </section>
 
     <!-- footer section ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <!-- custom js file link  -->

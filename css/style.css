@@ -188,15 +188,15 @@ section {
 }
 
 .slide_holder .slide_inner {
-    background: url(../images/blog-1.jpg) center/cover no-repeat;
+    background: url(../assets/images/blog-1.jpg) center/cover no-repeat;
 }
 
 .slide_holder:nth-child(2) .slide_inner {
-    background: url(../images/blog-2.jpg) center/cover no-repeat;
+    background: url(../assets/images/blog-2.jpg) center/cover no-repeat;
 }
 
 .slide_holder:nth-child(3) .slide_inner {
-    background: url(../images/blog-3.jpg) center/cover no-repeat;
+    background: url(../assets/images/blog-3.jpg) center/cover no-repeat;
 }
 
 .slider_wrapper {

@@ -1,32 +1,24 @@
 <div class="sidebar">
-
-            <div class="box" id="about">
-                <h3 class="title">About Me</h3>
-                <div class="about">
-                    <img src="images/user.png" alt="">
-                    <h3>Prakash Mandal</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, officia.</p>
-                    <div class="follow">
-                        <a href="#" class="fab fa-facebook-f"></a>
-                        <a href="#" class="fab fa-twitter"></a>
-                        <a href="#" class="fab fa-instagram"></a>
-                        <a href="#" class="fab fa-linkedin"></a>
-                    </div>
-                </div>
-            </div>
-
+    
             <div class="box">
                 <h3 class="title">Categories</h3>
+<?php
+$categories=new query();
+$category=$categories->getData('categories');
+foreach ($category as $cat) {
+?>
+
+            
                 <div class="category">
-                    <a href="#"> Information Technology <span>42</span></a>
-                    <a href="#"> AI <span>75</span> </a>
-                    <a href="#"> Technology <span>22</span> </a>
-                    <a href="#"> Smartphones <span>17</span> </a>
-                    <a href="#"> Educational <span>48</span> </a>
-                    <a href="#"> Cybersecurity <span>32</span> </a>
-                    <a href="#"> Science <span>39</span> </a>
-                    <a href="#"> Business <span>32</span> </a>
+                    <a href="index.php?cat_id=<?=$cat['cat_id']?>"><?=$cat['cat_name']?> <span><?php 
+                        #posts no. according to category
+                    countelements($cat['cat_id'],'cat_id','posts');
+                    
+                    ?>
+                    </span></a>
                 </div>
+
+<?php } ?>
             </div>
 
             <div class="box">
@@ -52,16 +44,16 @@
             </div>
 
             <div class="box">
-                <h3 class="title">popular tags</h3>
+                <h3 class="title">Most Searched</h3>
                 <div class="tags">
-                    <a href="#">Cyber</a>
-                    <a href="#">iphones</a>
-                    <a href="#">smartphones</a>
-                    <a href="#">engineering</a>
-                    <a href="#">design</a>
-                    <a href="#">gadgets</a>
-                    <a href="#">coding</a>
-                    <a href="#">tech</a>
+                    <a href="index.php?search=cyber">Cyber</a>
+                    <a href="index.php?search=asf">asf</a>
+                    <a href="index.php?search=samrtphones">smartphones</a>
+                    <a href="index.php?search=engineering">engineering</a>
+                    <a href="index.php?search=design">design</a>
+                    <a href="index.php?search=gadgets">gadgets</a>
+                    <a href="index.php?search=coding">coding</a>
+                    <a href="index.php?search=tech">tech</a>
                 </div>
             </div>
 
