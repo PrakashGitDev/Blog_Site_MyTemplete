@@ -5,7 +5,12 @@ function getwithclause($id='',$key='',$table='',$field='*',$order_field='',$type
 $obj=new query();
 $cond_arr = array($key => $id);
 $category=$obj->getData($table,$field,$cond_arr,$order_field,$type,$limit);	
-echo $category['0'][$field];
+if (isset($category['0'][$field])) {
+	echo $category['0'][$field];
+}else{
+	echo "";
+}
+
 }
 
 //getwithclause(2,'cat_id','categories','cat_name');

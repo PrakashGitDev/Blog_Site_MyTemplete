@@ -78,7 +78,7 @@ if (isset($_GET['cat_id'])) {
         
             <div class="post">
                 <a href="post.php?id=<?=$list['id']?>">
-                    <img src="assets/images/blog-1.jpg" alt="" class="image">
+                    <img src="assets/images/<?=$list['img']?>" alt="" class="image">
                     <div class="date">
                         <i class="far fa-clock"></i>
                         <span>Posted on <?=date('F jS,Y',strtotime($list["date"]))?></span>
@@ -181,7 +181,7 @@ if(isset($result['0'])){
     
 
     <?php include 'includes/footer.php';?>
-    
+
 
     <!-- custom js file link  -->
     <script src="js/script.js"></script>

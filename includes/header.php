@@ -22,7 +22,6 @@ require('includes/functions.php');
     
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
 
 </head>
 
@@ -36,8 +35,6 @@ require('includes/functions.php');
 
         <nav class="navbar">
             <a href="index.php">Home</a>
-            <a href="#banner">banner</a>
-            <a href="#about">About Me</a>
             <a href="contact.php">contact me</a>
         </nav>
 

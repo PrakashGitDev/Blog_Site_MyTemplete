@@ -1,5 +1,4 @@
-<?php include 'includes/header.php'; 
-print_r($_POST);?>
+<?php include 'includes/header.php';?>
 <?php
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
@@ -36,7 +35,7 @@ if (isset($_POST['submit'])) {
 
         //Recipients
         $mail->setFrom('cof.nep@gmail.com', 'Do not Reply');
-        $mail->addAddress('kabishbrt@gmail.com');     //Add a recipient
+        $mail->addAddress('solutiongate.sg@gmail.com');     //Add a recipient
                       //Name is optional
         
 
