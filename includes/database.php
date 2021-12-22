@@ -16,7 +16,7 @@ class database{
 }
 
 class query extends database{
-	public function getData($table,$field='*',$condition_arr='',$order_by_field='',$order_by_type='desc',$limit='',$result='',$post_per_page=''){
+	public function getData($table,$field='*',$condition_arr='',$order_by_field='',$order_by_type='desc',$limit='',$post_per_page=''){
 		$sql="select $field from $table ";
 		if($condition_arr!=''){
 			$sql.=' where ';
@@ -36,7 +36,10 @@ class query extends database{
 		}
 		
 		if($limit!=''){
-			$sql.=" limit $limit ";
+			$sql.=" limit $limit";
+		}
+		if($post_per_page!=''){
+			$sql.=",$post_per_page";
 		}
 		//die($sql);
 		$result=$this->connect()->query($sql);
@@ -50,7 +53,7 @@ class query extends database{
 			return 0;
 		}
 	}
-	public function search($table,$field='*',$condition_arr='',$order_by_field='',$order_by_type='desc',$limit='',$result='',$post_per_page='')
+	public function search($table,$field='*',$condition_arr='',$order_by_field='',$order_by_type='desc',$limit='',$post_per_page='')
 	{
 		$sql="select $field from $table ";
 		if ($condition_arr!='') {
@@ -62,8 +65,11 @@ class query extends database{
 			$sql.=" order by $order_by_field $order_by_type ";
 		}
 		
-		if($result!='' && $post_per_page!=''){
-			$sql.=" limit $result,$post_per_page ";
+		if($limit!=''){
+			$sql.=" limit $limit";
+		}
+		if($post_per_page!=''){
+			$sql.=",$post_per_page ";
 		}
 		//die($sql);
 		$result=$this->connect()->query($sql);

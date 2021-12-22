@@ -12,7 +12,7 @@ foreach ($category as $cat) {
                 <div class="category">
                     <a href="index.php?cat_id=<?=$cat['cat_id']?>"><?=$cat['cat_name']?> <span><?php 
                         #posts no. according to category
-                    countelements($cat['cat_id'],'cat_id','posts');
+                    $cnt=countelements($cat['cat_id'],'cat_id','posts');
                     
                     ?>
                     </span></a>
@@ -20,7 +20,7 @@ foreach ($category as $cat) {
 
 <?php } ?>
             </div>
-
+<!--
             <div class="box">
                 <h3 class="title">Popular Posts</h3>
                 <div class="p-post">
@@ -42,18 +42,15 @@ foreach ($category as $cat) {
                     </a>
                 </div>
             </div>
-
+-->
             <div class="box">
                 <h3 class="title">Most Searched</h3>
                 <div class="tags">
-                    <a href="index.php?search=cyber">Cyber</a>
-                    <a href="index.php?search=asf">asf</a>
-                    <a href="index.php?search=samrtphones">smartphones</a>
-                    <a href="index.php?search=engineering">engineering</a>
-                    <a href="index.php?search=design">design</a>
-                    <a href="index.php?search=gadgets">gadgets</a>
-                    <a href="index.php?search=coding">coding</a>
-                    <a href="index.php?search=tech">tech</a>
+                    <a href="index.php?search=cyber">Tech</a>
+                    <a href="index.php?search=asf">Hello World</a>
+                    <a href="index.php?search=samrtphones">World</a>
+                    <a href="index.php?search=samrtphones">T</a>
+                    
                 </div>
             </div>
 

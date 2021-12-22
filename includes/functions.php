@@ -14,12 +14,16 @@ if (isset($category['0'][$field])) {
 }
 
 //getwithclause(2,'cat_id','categories','cat_name');
-function countelements($id='',$key='',$table='',$field='*',$order_field='',$type='',$limit='')
+function countelements($id='', $key='', $table='', $field='*', $order_field='', $type='', $limit='')
 {
-$obj=new query();
-$cond_arr = array($key => $id);
-$category=$obj->getData($table,$field,$cond_arr,$order_field,$type,$limit);	
-echo(count($category));
+    $obj=new query();
+    $cond_arr = array($key => $id);
+    $category=$obj->getData($table, $field, $cond_arr, $order_field, $type, $limit);
+    if (isset($category['0'])) {
+        echo(count($category));
+    } else {
+        echo '0';
+    }
 }
 
 //countelements(1,'cat_id','posts');

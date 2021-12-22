@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
 
         //Recipients
         $mail->setFrom('cof.nep@gmail.com', 'Do not Reply');
-        $mail->addAddress('solutiongate.sg@gmail.com');     //Add a recipient
+        $mail->addAddress('kabishbrt@gmail.com');     //Add a recipient
                       //Name is optional
         
 
@@ -54,7 +54,7 @@ if (isset($_POST['submit'])) {
 
 }
 ?>
-
+<br><br><br><br><br>
 <section class="container" id="posts">
 
         <div>

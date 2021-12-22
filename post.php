@@ -15,7 +15,7 @@ $result=$post->getData('posts','*',$condition_arr,'','',1);
 
         <div class="posts-container">
                 <div class="post">
-                    <img src="assets/images/blog-1.jpg" alt="" class="postimage">
+                    <img src="assets/images/<?=$result['0']['img']?>" alt="" class="postimage">
                     <div class="date">
                         <i class="far fa-clock"></i>
                         <span>Posted on <?=date('F jS,Y',strtotime($result['0']['date']))?></span>
